@@ -25,7 +25,7 @@ SECRET_KEY = '$uv^uit^=(4p#zs07s+%c2nsek%rze1wyo_63-s5echewg)*w0'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'lists',
-    'debug_toolbar',
+    # 'debug_toolbar',
 ]
 
 MIDDLEWARE = [
@@ -49,7 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'debug_toolbar.middleware.DebugToolbarMiddleware',
+    # 'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'superlists.urls'
@@ -123,9 +123,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.abspath(os.path.join(BASE_DIR, '../static'))
 
-def show_toolbar(request):
-  return True
+# def show_toolbar(request):
+#   return True
   
-DEBUG_TOOLBAR_CONFIG = {
-  "SHOW_TOOLBAR_CALLBACK" : show_toolbar,
-}
+# DEBUG_TOOLBAR_CONFIG = {
+#   "SHOW_TOOLBAR_CALLBACK" : show_toolbar,
+# }
